@@ -2,12 +2,9 @@ import './Sidebar.css'
 
 const Sidebar = () => {
     return (<nav className='sidebar'>
-        <ul>
-            <li>teste</li>
-            <li>teste</li>
-            <li>teste</li>
-        </ul>
-        <p>aloiu</p>
+        <p>home</p>
+        <p>theme</p>
+        <p>profile</p>
     </nav>)
 }
 
