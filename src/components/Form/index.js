@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import TextField from '../TextField'
 import './Form.scss'
 
 const Form = (props) => {
@@ -29,7 +30,41 @@ const Form = (props) => {
     return (
         <section className="form">
             <form onSubmit={onSave}>
-                
+                <TextField 
+                    required={true}
+                    label="Code"
+                    placeholder="Insert Code"
+                    value={code}
+                    onTyped={value => setCode(value)}
+                />
+                <TextField 
+                    required={true}
+                    label="Date"
+                    placeholder="Select Date"
+                    value={date}
+                    onTyped={value => setDate(value)}
+                />
+                <TextField 
+                    required={true}
+                    label="Name"
+                    placeholder="Client name"
+                    value={name}
+                    onTyped={value => setName(value)}
+                />
+                <TextField 
+                    required={true}
+                    label="Value"
+                    placeholder="Insert invoice value"
+                    value={value}
+                    onTyped={value => setValue(value)}
+                />
+                <TextField 
+                    required={true}
+                    label="Status"
+                    placeholder="Status"
+                    value={status}
+                    onTyped={value => setStatus(value)}
+                />
             </form>
 
         </section>
