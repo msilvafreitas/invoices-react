@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import TextField from '../TextField'
+import Button from '../Button'
 import './Form.scss'
 
 const Form = (props) => {
@@ -35,36 +36,37 @@ const Form = (props) => {
                     label="Code"
                     placeholder="Insert Code"
                     value={code}
-                    onTyped={value => setCode(value)}
+                    onModified={value => setCode(value)}
                 />
                 <TextField 
                     required={true}
                     label="Date"
                     placeholder="Select Date"
                     value={date}
-                    onTyped={value => setDate(value)}
+                    onModified={value => setDate(value)}
                 />
                 <TextField 
                     required={true}
                     label="Name"
                     placeholder="Client name"
                     value={name}
-                    onTyped={value => setName(value)}
+                    onModified={value => setName(value)}
                 />
                 <TextField 
                     required={true}
                     label="Value"
                     placeholder="Insert invoice value"
                     value={value}
-                    onTyped={value => setValue(value)}
+                    onModified={value => setValue(value)}
                 />
                 <TextField 
                     required={true}
                     label="Status"
                     placeholder="Status"
                     value={status}
-                    onTyped={value => setStatus(value)}
+                    onModified={value => setStatus(value)}
                 />
+                <Button>New Invoice</Button>
             </form>
 
         </section>
