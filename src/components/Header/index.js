@@ -5,7 +5,7 @@ const Header = () => {
         <header className='header'>
             <h1>Invoices</h1>
             <h5>There are N total invoices</h5>
-            <h4>Filter by</h4>
+            <h4 className='filter'>Filter by</h4>
             
         </header>
         
