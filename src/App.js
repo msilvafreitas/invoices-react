@@ -12,12 +12,12 @@ function App() {
 
   const onNewInvoiceAdd = (invoice) => {
 
-    setInvoices([invoice, invoices])
+    setInvoices([...invoices, invoice])
   }
 
   return (
     <div className="App">
-      <Sidebar />
+      
       <Header />
       <Form onInvoiceSent={invoice => onNewInvoiceAdd(invoice)}/>
       
