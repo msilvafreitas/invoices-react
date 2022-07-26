@@ -13,7 +13,7 @@ const TextField = (props) => {
             <label>
                 {props.label}
             </label>
-            <input value={props.value} onChange={onTyped} required={props.required} placeholder={placeholderMod}/>
+            <input value={props.value} onChange={onTyped} required={props.required} placeholder={placeholderMod} maxLength={props.length}/>
             
         </div>
     )

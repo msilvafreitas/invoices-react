@@ -1,1 +1,10 @@
-/*# sourceMappingURL=TextField.css.map */
+.text-field {
+  color: white;
+  padding: 0.5rem;
+}
+.text-field label {
+  padding: 1rem;
+}
+.text-field input {
+  padding: 0.5rem;
+}/*# sourceMappingURL=TextField.css.map */

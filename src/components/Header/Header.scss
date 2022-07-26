@@ -1,12 +1,15 @@
 .header {
-    margin: 0 1rem;
+    margin: 1rem;
     color: white;
     display: flex;
     align-items: center;
     justify-content:space-evenly;
+    background-color: #25273c;
+    border-radius: 1rem;
+    
     h1 {
         margin: 0;
-        padding: 2rem;
+        padding: 1rem 2rem;
         color: #00ff80;
     }
     .filter {

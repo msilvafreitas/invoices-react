@@ -1,5 +1,44 @@
+body {
+  background-color: #181824;
+}
+
 .App {
   text-align: center;
-  background-color: #181824;
   height: 100vh;
+}
+
+table {
+  border-spacing: 0 5px;
+  
+}
+
+.table {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin: 1rem;
+  color: white;
+  
+  
+}
+
+.line {
+  background-color: #25273c;
+  border-radius: 1rem;
+  
+}
+
+th {
+  font-size: 1.3rem;
+  color: #00ff80;
+}
+
+th, td {
+  padding: 1rem;
+  margin: 1rem;
+}
+
+tr:hover {
+  background-color: #181824;
 }

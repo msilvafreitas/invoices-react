@@ -1,1 +1,11 @@
-/*# sourceMappingURL=Invoice.css.map */
+.code:before {
+  content: "#";
+  color: rgb(95, 95, 139);
+}
+
+.value:before {
+  content: "$";
+  font-weight: bold;
+  color: #00ff80;
+  padding-right: 0.3rem;
+}/*# sourceMappingURL=Invoice.css.map */

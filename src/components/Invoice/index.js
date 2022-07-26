@@ -1,14 +1,14 @@
 import './Invoice.scss'
 
-const Invoice = ({ code, date, name, value, status }) => {
+const Invoice = ({  date, name, value, }) => {
     return (
-        <div className='invoice'>
-            <h5>{code}</h5>
-            <h5>{date}</h5>
-            <h5>{name}</h5>
-            <h5>{value}</h5>
-            <h5>{status}</h5>
-        </div>
+        <tr className='line'>
+            
+            <td className='date'>{date}</td>
+            <td className='name'>{name}</td>
+            <td className='value'>{value}</td>
+            
+        </tr>
     )
 }
 

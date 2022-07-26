@@ -8,6 +8,18 @@ import Invoice from './components/Invoice';
 function App() {
 
 
+  const status = [
+    {
+      name: 'Paid',
+      primaryColor: '#50b09d',
+      secondaryColor: '#1f2c3f'
+    },
+    {
+      name: 'Pending',
+      primaryColor: '#d88f3b',
+      secondaryColor: '#2b2734'
+    }]
+
   const [invoices, setInvoices] = useState([])
 
   const onNewInvoiceAdd = (invoice) => {
@@ -20,8 +32,18 @@ function App() {
       
       <Header />
       <Form onInvoiceSent={invoice => onNewInvoiceAdd(invoice)}/>
-      
-      {invoices.map(invoice => <Invoice key={invoice.code} code={invoice.code} name={invoice.name} date={invoice.date} value={invoice.value} status={invoice.status}/>)}
+      <div className='table'>
+        <table>
+              <tr className='line head'>
+                  
+                  <th>Date</th>
+                  <th>Name</th>
+                  <th>Value</th>
+                  
+              </tr>
+              {invoices.map(invoice => <Invoice key={invoice.code} code={invoice.code} name={invoice.name} date={invoice.date} value={invoice.value} status={invoice.status}/>)}
+        </table>
+      </div>
     </div>
   );
 }

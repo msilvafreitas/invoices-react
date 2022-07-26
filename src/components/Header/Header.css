@@ -1,8 +1,19 @@
 .header {
-  margin: 0;
+  margin: 1rem;
   color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #25273c;
+  border-radius: 1rem;
 }
 .header h1 {
   margin: 0;
-  padding: 2rem;
+  padding: 1rem 2rem;
+  color: #00ff80;
+}
+.header .filter {
+  background-color: #25273c;
+  border-radius: 1rem;
+  padding: 0.5rem 2rem 0.5rem 1rem;
 }/*# sourceMappingURL=Header.css.map */
