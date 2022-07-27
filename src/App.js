@@ -35,10 +35,11 @@ function App() {
       <div className='table'>
         <table>
               <tr className='line head'>
-                  
+                  <th>Code</th>
                   <th>Date</th>
                   <th>Name</th>
                   <th>Value</th>
+                  <th>Status</th>
                   
               </tr>
               {invoices.map(invoice => <Invoice key={invoice.code} code={invoice.code} name={invoice.name} date={invoice.date} value={invoice.value} status={invoice.status}/>)}
