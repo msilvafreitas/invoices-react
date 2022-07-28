@@ -1,4 +1,4 @@
-
+import './List.scss'
 
 const List = (props) => {
     return (

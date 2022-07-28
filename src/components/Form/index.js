@@ -37,13 +37,7 @@ const Form = (props) => {
     return (
         <section className="form">
             <form onSubmit={onSave}>
-                <TextField 
-                    required={true}
-                    label="Code"
-                    placeholder="Insert Code"
-                    value={code}
-                    onModified={value => setCode(value)}
-                />
+                
                 
                 <NumberFormat 
                     customInput={TextField}
@@ -66,7 +60,6 @@ const Form = (props) => {
                 <NumberFormat 
                     customInput={TextField}
                     thousandSeparator={true}
-                    prefix={'$'}
                     label="Value"
                     required={true}
                     placeholder="$$$" 

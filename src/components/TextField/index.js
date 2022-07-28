@@ -2,7 +2,7 @@ import './TextField.scss'
 
 const TextField = (props) => {
 
-    const placeholderMod = `${props.placeholder}...`
+    const placeholderMod = `${props.placeholder}`
 
     const onTyped = (event) => {
         props.onModified(event.target.value)
