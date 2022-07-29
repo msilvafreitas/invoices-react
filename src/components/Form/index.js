@@ -3,6 +3,7 @@ import TextField from '../TextField'
 import Button from '../Button'
 import './Form.scss'
 import NumberFormat from 'react-number-format'
+import List from '../List'
 
 
 const Form = (props) => {
@@ -67,6 +68,7 @@ const Form = (props) => {
                     onModified={value => setValue(value)}
                     length={9}
                     />
+                
                 
                 <Button>New Invoice</Button>
             </form>
