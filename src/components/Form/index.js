@@ -5,11 +5,6 @@ import './Form.scss'
 import NumberFormat from 'react-number-format'
 import Dropd from '../Dropd'
 
-const payments = [
-    'Paid',
-    'Pending'
-]
-
 
 const Form = (props) => {
 
@@ -17,26 +12,23 @@ const Form = (props) => {
     const [date, setDate] = useState('')
     const [name, setName] = useState('')
     const [value, setValue] = useState('')
-    const [status, setStatus] = useState('')
+    const [situation, setSituation] = useState('')
    
 
     const onSave = (event) => {
         event.preventDefault()
         props.onInvoiceSent({
-            
             code,
             date,
             name,
             value,
-            status
-            
+            situation
         })
-        
         setCode('')
         setDate('')
         setName('')
         setValue('')
-        setStatus('')
+        setSituation('')
     }
 
 
@@ -74,7 +66,13 @@ const Form = (props) => {
                     length={9}
                     />
                 
-                <Dropd itens={payments}/>
+                <Dropd 
+                    itens={props.situations}
+                    required={true}
+                    label="Status"
+                    value={situation}
+                    onModified={value => setSituation(value)}
+                />
                 
                 
                 <Button>New Invoice</Button>

@@ -1,6 +1,6 @@
 import './Invoice.scss'
 
-const Invoice = ({  code, date, name, value, status }) => {
+const Invoice = ({  code, date, name, value, situation }) => {
     return (
         <tr className='line'>
             
@@ -8,7 +8,7 @@ const Invoice = ({  code, date, name, value, status }) => {
             <td className='date'>{date}</td>
             <td className='name'>{name}</td>
             <td className='value'>{value}</td>
-            <td className='status'>{status}</td>
+            <td className='situation'>{situation}</td>
             
         </tr>
     )

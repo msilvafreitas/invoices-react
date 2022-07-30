@@ -1,0 +1,11 @@
+.dropd {
+  color: white;
+  padding: 0.5rem;
+}
+.dropd label {
+  padding: 1rem;
+}
+.dropd select {
+  padding: 0.5rem;
+  width: 12rem;
+}/*# sourceMappingURL=Dropd.css.map */

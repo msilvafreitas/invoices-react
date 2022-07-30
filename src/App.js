@@ -8,7 +8,7 @@ import Invoice from './components/Invoice';
 function App() {
 
 
-  const status = [
+  const situations = [
     {
       name: 'Paid',
       primaryColor: '#50b09d',
@@ -31,7 +31,7 @@ function App() {
     <div className="App">
       
       <Header />
-      <Form onInvoiceSent={invoice => onNewInvoiceAdd(invoice)}/>
+      <Form situations={situations.map(situation => situation.name)}  onInvoiceSent={invoice => onNewInvoiceAdd(invoice)}/>
       <div className='table'>
         <table>
               <tr className='line head'>
@@ -42,7 +42,7 @@ function App() {
                   <th>Status</th>
                   
               </tr>
-              {invoices.map(invoice => <Invoice key={invoice.code} code={invoice.code} name={invoice.name} date={invoice.date} value={invoice.value} status={invoice.status}/>)}
+              {invoices.map(invoice => <Invoice key={invoice.code} code={invoice.code} name={invoice.name} date={invoice.date} value={invoice.value} situation={invoice.situation}/>)}
         </table>
       </div>
     </div>

@@ -1,3 +1,5 @@
+import './Dropd.scss'
+
 const Dropd = (props) => {
     return (
         <div className='dropd'>
