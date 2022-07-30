@@ -3,7 +3,12 @@ import TextField from '../TextField'
 import Button from '../Button'
 import './Form.scss'
 import NumberFormat from 'react-number-format'
-import List from '../List'
+import Dropd from '../Dropd'
+
+const payments = [
+    'Paid',
+    'Pending'
+]
 
 
 const Form = (props) => {
@@ -68,6 +73,8 @@ const Form = (props) => {
                     onModified={value => setValue(value)}
                     length={9}
                     />
+                
+                <Dropd itens={payments}/>
                 
                 
                 <Button>New Invoice</Button>
