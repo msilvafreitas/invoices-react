@@ -1,17 +1,19 @@
 import './Invoice.scss'
 
-const Invoice = ({  code, date, name, value, situation }) => {
+const Invoice = (props) => {
     return (
         <tr className='line'>
             
-            <td className='code'>{code}</td>
-            <td className='date'>{date}</td>
-            <td className='name'>{name}</td>
-            <td className='value'>{value}</td>
-            <td className='situation'>{situation}</td>
+            <td className='code'>{props.code}</td>
+            <td className='date'>{props.date}</td>
+            <td className='name'>{props.name}</td>
+            <td className='value'>{props.value}</td>
+            <td className={props.color} style={{color: props.color}}>{props.situation}</td>
+            
             
         </tr>
     )
 }
+
 
 export default Invoice

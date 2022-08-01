@@ -6,6 +6,8 @@ import NumberFormat from 'react-number-format'
 import Dropd from '../Dropd'
 
 
+
+
 const Form = (props) => {
 
     const [code, setCode] = useState('')
@@ -67,11 +69,11 @@ const Form = (props) => {
                     />
                 
                 <Dropd 
-                    itens={props.situations}
                     required={true}
                     label="Status"
+                    itens={props.situations}
                     value={situation}
-                    onModified={value => setSituation(value)}
+                    onChange={value => setSituation(value)}
                 />
                 
                 

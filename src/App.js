@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import './App.css';
-import Sidebar from './components/Sidebar';
 import Header from './components/Header';
 import Form from './components/Form';
 import Invoice from './components/Invoice';
@@ -11,13 +10,11 @@ function App() {
   const situations = [
     {
       name: 'Paid',
-      primaryColor: '#50b09d',
-      secondaryColor: '#1f2c3f'
+      color: 'green'
     },
     {
       name: 'Pending',
-      primaryColor: '#d88f3b',
-      secondaryColor: '#2b2734'
+      color: 'yellow'
     }]
 
   const [invoices, setInvoices] = useState([])
@@ -31,7 +28,9 @@ function App() {
     <div className="App">
       
       <Header />
-      <Form situations={situations.map(situation => situation.name)}  onInvoiceSent={invoice => onNewInvoiceAdd(invoice)}/>
+      <Form 
+        situations={situations.map(situation => situation.name)} 
+        onInvoiceSent={invoice => onNewInvoiceAdd(invoice)} />
       <div className='table'>
         <table>
               <tr className='line head'>
@@ -42,7 +41,15 @@ function App() {
                   <th>Status</th>
                   
               </tr>
-              {invoices.map(invoice => <Invoice key={invoice.code} code={invoice.code} name={invoice.name} date={invoice.date} value={invoice.value} situation={invoice.situation}/>)}
+              {invoices.map(invoice => 
+                <Invoice 
+                  key={invoice.name} 
+                  code={invoice.code} 
+                  name={invoice.name} 
+                  date={invoice.date} 
+                  value={invoice.value} 
+                  situation={invoice.situation} 
+                  color={invoice.color}/>)}
         </table>
       </div>
     </div>

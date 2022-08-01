@@ -2,7 +2,7 @@ import './TextField.scss'
 
 const TextField = (props) => {
 
-    const placeholderMod = `${props.placeholder}`
+    const placeholderMod = `${props.placeholder}...`
 
     const onTyped = (event) => {
         props.onModified(event.target.value)
@@ -13,8 +13,12 @@ const TextField = (props) => {
             <label>
                 {props.label}
             </label>
-            <input value={props.value} onChange={onTyped} required={props.required} placeholder={placeholderMod} maxLength={props.length}/>
-            
+            <input 
+                value={props.value} 
+                onChange={onTyped} 
+                required={props.required} 
+                placeholder={placeholderMod} 
+                maxLength={props.length}/>
         </div>
     )
 }
