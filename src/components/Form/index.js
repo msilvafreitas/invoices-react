@@ -15,6 +15,7 @@ const Form = (props) => {
     const [name, setName] = useState('')
     const [value, setValue] = useState('')
     const [situation, setSituation] = useState('')
+    const [color, setColor] = useState('')
    
 
     const onSave = (event) => {
@@ -24,13 +25,15 @@ const Form = (props) => {
             date,
             name,
             value,
-            situation
+            situation,
+            color
         })
         setCode('')
         setDate('')
         setName('')
         setValue('')
         setSituation('')
+        setColor('')
     }
 
 

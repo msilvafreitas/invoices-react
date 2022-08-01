@@ -27,7 +27,8 @@ function App() {
   return (
     <div className="App">
       
-      <Header />
+      <Header total={invoices.length} />
+      <div className='body'>
       <Form 
         situations={situations.map(situation => situation.name)} 
         onInvoiceSent={invoice => onNewInvoiceAdd(invoice)} />
@@ -44,13 +45,15 @@ function App() {
               {invoices.map(invoice => 
                 <Invoice 
                   key={invoice.name} 
-                  code={invoice.code} 
+                  code={(invoices.indexOf(invoice))+1} 
                   name={invoice.name} 
                   date={invoice.date} 
                   value={invoice.value} 
                   situation={invoice.situation} 
-                  color={invoice.color}/>)}
+                  color={situations.color}
+                  />)}
         </table>
+      </div>
       </div>
     </div>
   );

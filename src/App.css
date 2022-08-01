@@ -10,6 +10,7 @@ body {
 table {
   border-spacing: 0 5px;
   
+  
 }
 
 .table {
@@ -19,8 +20,19 @@ table {
   border-radius: 1rem;
   margin: 1rem;
   color: white;
+  background-color: #25273c;
   
   
+}
+
+@media screen and (max-width: 517px) {
+  .table {
+    transform: scale(0.75);
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    background-color: #181824;
+  }
 }
 
 .line {
@@ -41,5 +53,14 @@ th, td {
 
 tr:hover {
   background-color: #0b0b11;
+  
+}
+
+@media screen and (min-width: 800px){
+  .body {
+    display: flex;
+    justify-content: center;
+    align-items:baseline;
+  }
   
 }

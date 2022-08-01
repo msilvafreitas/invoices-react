@@ -1,12 +1,12 @@
 import './Header.scss'
 
 
-const Header = () => {
+const Header = (props) => {
     return (
         <header className='header'>
             <h1>Invoices</h1>
-            <h5>There are N total invoices</h5>
-            <h4>Filter by</h4>
+            <h5>There are {props.total} total invoices</h5>
+            
             
         </header>
     )
