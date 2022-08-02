@@ -11,9 +11,9 @@ const Invoice = (props) => {
             <td className='date'>{props.date}</td>
             <td className='name'>{props.name}</td>
             <td className='value'>{props.value}</td>
+            <a className='changeStatus'>
             <td className={props.color}>{props.situation}</td>
-            
-            
+            </a>
         </tr>
     )
 }

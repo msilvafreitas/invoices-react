@@ -40,7 +40,7 @@ const Form = (props) => {
     return (
         <section className="form">
             <form onSubmit={onSave}>
-                
+                <h4>New:</h4>
                 
                 <NumberFormat 
                     customInput={TextField}
@@ -62,13 +62,13 @@ const Form = (props) => {
                 />
                 <NumberFormat 
                     customInput={TextField}
-                    thousandSeparator={true}
+                    thousandSeparator={true}                    
+                    decimalSeparator="."
                     label="Value"
                     required={true}
                     placeholder="$$$" 
                     value={value}
                     onModified={value => setValue(value)}
-                    length={9}
                     />
                 
                 <Dropd 

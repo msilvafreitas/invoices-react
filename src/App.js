@@ -35,7 +35,7 @@ function App() {
       <div className='table'>
         <table>
               <tr className='line head'>
-                  <th>Code</th>
+                  <th>#</th>
                   <th>Date</th>
                   <th>Name</th>
                   <th>Value</th>
@@ -50,7 +50,7 @@ function App() {
                   date={invoice.date} 
                   value={invoice.value} 
                   situation={invoice.situation} 
-                  color={situations.color}
+                  color={invoice.color}
                   />)}
         </table>
       </div>

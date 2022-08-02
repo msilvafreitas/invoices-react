@@ -5,6 +5,7 @@
     color: rgb(95, 95, 139);
     }
 }
+
 .value {
     &:before {
         content: "$";
@@ -24,4 +25,8 @@
     color: #d88f3b;
     font-weight: bolder;
     font-size: 1.2rem;
+}
+
+.changeStatus {
+    cursor: pointer;
 }
