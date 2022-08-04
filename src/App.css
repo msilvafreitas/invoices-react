@@ -16,6 +16,7 @@ table {
 .table {
   display: flex;
   justify-content: space-evenly;
+  flex-direction: column;
   padding: 1rem;
   border-radius: 1rem;
   margin: 1rem;
@@ -42,7 +43,7 @@ table {
 }
 
 th {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   color: #00ff80;
 }
 

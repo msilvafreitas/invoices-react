@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './App.css';
 import Header from './components/Header';
 import Form from './components/Form';
-import Invoice from './components/Invoice';
+import Situation from './components/Situation';
 
 function App() {
 
@@ -10,11 +10,13 @@ function App() {
   const situations = [
     {
       name: 'Paid',
-      color: 'green'
+      color: 'green',
+      symbol: '✔'
     },
     {
       name: 'Pending',
-      color: 'yellow'
+      color: 'yellow',
+      symbol: '⧖'
     }]
 
   const [invoices, setInvoices] = useState([])
@@ -26,34 +28,34 @@ function App() {
 
   return (
     <div className="App">
-      
       <Header total={invoices.length} />
+      
       <div className='body'>
-      <Form 
-        situations={situations.map(situation => situation.name)} 
-        onInvoiceSent={invoice => onNewInvoiceAdd(invoice)} />
-      <div className='table'>
-        <table>
-              <tr className='line head'>
-                  <th>#</th>
-                  <th>Date</th>
-                  <th>Name</th>
-                  <th>Value</th>
-                  <th>Status</th>
-                  
-              </tr>
-              {invoices.map(invoice => 
-                <Invoice 
-                  key={invoice.name} 
-                  code={(invoices.indexOf(invoice))+1} 
-                  name={invoice.name} 
-                  date={invoice.date} 
-                  value={invoice.value} 
-                  situation={invoice.situation} 
-                  color={invoice.color}
-                  />)}
-        </table>
-      </div>
+        <Form 
+          situations={situations.map(situation => situation.name)} 
+          onInvoiceSent={invoice => onNewInvoiceAdd(invoice)} />
+          <div className='invoices table'>
+          <table>
+            <tr className='line head'>
+                    <th>#</th>
+                    <th>Date</th>
+                    <th>Name</th>
+                    <th>Value</th>
+                    <th>Status</th>
+                    
+                </tr>
+          </table>
+        <div>
+                {situations.map(situation => 
+                    <Situation 
+                      key={situation.name}
+                      name={situation.name}
+                      color={situation.color}
+                      symbol={situation.symbol}
+                      invoices={invoices.filter(invoice => invoice.situation === situation.name)}
+                    />)}
+        </div>
+        </div>
       </div>
     </div>
   );

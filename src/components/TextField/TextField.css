@@ -2,6 +2,11 @@
   color: white;
   padding: 0.5rem;
 }
+@media screen and (min-width: 800px) {
+  .text-field {
+    text-align: end;
+  }
+}
 .text-field label {
   padding: 1rem;
 }

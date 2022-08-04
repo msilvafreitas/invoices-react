@@ -1,1 +1,12 @@
-/*# sourceMappingURL=Form.css.map */
+.form {
+  background-color: #25273c;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+h4 {
+  color: #00ff80;
+  font-weight: bolder;
+  font-size: 1.2rem;
+}/*# sourceMappingURL=Form.css.map */
