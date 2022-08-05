@@ -4,6 +4,7 @@
     content: "#";
     color: rgb(95, 95, 139);
     }
+    font-weight: bolder;
 }
 
 .value {
@@ -19,15 +20,20 @@
     color: #00ff80;
     font-weight: bolder;
     font-size: 1.2rem;
-    content: none;
+    
 }
 
 .yellow {
     color: #ffea00;
     font-weight: bolder;
     font-size: 1.2rem;
+    cursor: pointer;
 }
 
-.changeStatus {
-    cursor: pointer;
+.name {
+    font-weight: bolder;
+}
+
+.date {
+    color: rgb(95, 95, 139);
 }

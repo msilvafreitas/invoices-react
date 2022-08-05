@@ -35,16 +35,7 @@ function App() {
           situations={situations.map(situation => situation.name)} 
           onInvoiceSent={invoice => onNewInvoiceAdd(invoice)} />
           <div className='invoices table'>
-          <table>
-            <tr className='line head'>
-                    <th>#</th>
-                    <th>Date</th>
-                    <th>Name</th>
-                    <th>Value</th>
-                    <th>Status</th>
-                    
-                </tr>
-          </table>
+          
         <div>
                 {situations.map(situation => 
                     <Situation 
