@@ -4,7 +4,7 @@ import Button from '../Button'
 import './Form.scss'
 import NumberFormat from 'react-number-format'
 import Dropd from '../Dropd'
-import SetCode from '../SetCode'
+
 
 
 
@@ -12,7 +12,7 @@ import SetCode from '../SetCode'
 const Form = (props) => {
 
     const gcode = Math.random().toString(16).substring(2, 8)
-    const [code, setCode] = useState('')
+    const [code, setCode] = useState(gcode)
     const [date, setDate] = useState('')
     const [name, setName] = useState('')
     const [value, setValue] = useState('')
@@ -31,7 +31,7 @@ const Form = (props) => {
             situation,
             color
         })
-        setCode('')
+        setCode(gcode)
         setDate('')
         setName('')
         setValue('')
@@ -44,9 +44,13 @@ const Form = (props) => {
         <section className="form">
             <form onSubmit={onSave}>
                 <h4>New:</h4>
-                <SetCode 
-                    value={gcode}
-                    onInvoiceSent={value => setCode(value)}
+                <TextField 
+                    required={true}
+                    label="Code"
+                    placeholder="Code"
+                    value={code}
+                    onModified={value => setCode(value)}
+                    length={7}
                 />
                 <NumberFormat 
                     customInput={TextField}

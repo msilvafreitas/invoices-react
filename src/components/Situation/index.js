@@ -12,7 +12,7 @@ const Situation = (props) => {
                 
             {props.invoices.map ( invoice =>
                 <Invoice 
-                
+                  code={invoice.code}
                   color={props.color}
                   key={invoice.name} 
                   name={invoice.name} 
@@ -20,6 +20,7 @@ const Situation = (props) => {
                   value={invoice.value} 
                   situation={props.symbol} 
                   />)}
+
             </table>
         </div>
         : ''
